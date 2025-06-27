@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Akses Air Bersih dan Sanitasi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -66,8 +67,7 @@
                 </div>
             </div>
         </section>
-        
-        
+
         <section class="section">
             <h2>Permasalahan yang Dihadapi</h2>
             <div class="grid">
@@ -111,5 +111,109 @@
                 <li>Menjaga fasilitas umum agar tetap bersih dan terawat</li>
             </ul>
         </section>
+
+        <section class="section" id="data">
+            <h2>Data Akses Air Bersih di Indonesia</h2>
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Provinsi</th>
+                        <th>Akses Air Bersih (%)</th>
+                        <th>Sanitasi (%)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DKI Jakarta</td>
+                        <td>95.2%</td>
+                        <td>89.7%</td>
+                        <td>Baik</td>
+                    </tr>
+                    <tr>
+                        <td>Jawa Barat</td>
+                        <td>78.5%</td>
+                        <td>72.3%</td>
+                        <td>Sedang</td>
+                    </tr>
+                    <tr>
+                        <td>Sumatera Utara</td>
+                        <td>68.9%</td>
+                        <td>65.1%</td>
+                        <td>Perlu Perbaikan</td>
+                    </tr>
+                    <tr>
+                        <td>Papua</td>
+                        <td>45.2%</td>
+                        <td>38.7%</td>
+                        <td>Buruk</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <h2>Komunitas Relawan Indonesia</h2>
+            <p>Di tengah meningkatnya permasalahan pencemaran air, muncul berbagai komunitas dari Indonesia yang bergerak secara nyata untuk menjadi bagian dari solusi.</p>
+            
+            <div class="image-gallery">
+                <div class="image-item">
+                    <img src="https://images.theconversation.com/files/559033/original/file-20231113-23-y77vl9.png?ixlib=rb-4.1.0&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip" alt="Pandawara Group">
+                    <h4>Pandawara Group</h4>
+                    <p>Sekelompok anak muda dari Bandung yang viral karena aksi membersihkan sungai dan pantai.</p>
+                </div>
+                <div class="image-item">
+                    <img src="https://thephrase.s3.ap-southeast-1.amazonaws.com/2022/03/239776302_358344982447613_866310781532837519_n.jpg" alt="Sungai Watch">
+                    <h4>Sungai Watch</h4>
+                    <p>Organisasi yang membangun sistem jaring sampah di sungai untuk mencegah sampah masuk ke laut.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <h2>Bergabung dengan Gerakan Kami</h2>
+            
+            <form class="form" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap:</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="region">Daerah:</label>
+                    <select id="region" required>
+                        <option value="">Pilih Daerah</option>
+                        <option value="jakarta">DKI Jakarta</option>
+                        <option value="jabar">Jawa Barat</option>
+                        <option value="sumut">Sumatera Utara</option>
+                        <option value="papua">Papua</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" rows="4" placeholder="Ceritakan bagaimana Anda ingin berkontribusi..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Kirim Pesan</button>
+            </form>
+        </section>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Bergabung dengan Gerakan Air Bersih</h2>
+            <p>Terima kasih atas minat Anda untuk bergabung! Bersama-sama kita dapat membuat perubahan yang nyata untuk akses air bersih dan sanitasi yang lebih baik.</p>
+            <p>Isi form di bawah untuk memulai perjalanan Anda sebagai relawan!</p>
+            <button class="btn" onclick="closeModal()">Mulai Sekarang</button>
+        </div>
+    </div>
 </body>
 </html>
