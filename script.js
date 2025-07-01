@@ -43,5 +43,35 @@ function animateCounter(id, target) {
     }, 20);
 }
 
+window.addEventListener('load', () => {
+    animateCounter('stat1', 2100);
+    animateCounter('stat2', 3.6);
+    animateCounter('stat3', 80);
+    animateCounter('stat4', 1000);
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        header.style.backdropFilter = 'blur(10px)';
+    } else {
+        header.style.background = '#fff';
+        header.style.backdropFilter = 'none';
+    }
+});
 
 
